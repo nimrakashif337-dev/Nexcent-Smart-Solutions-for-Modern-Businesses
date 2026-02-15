@@ -22,7 +22,8 @@ import paymentsIcon from "../assets/payments.png";
 import footerIllustration from "../assets/mobile-login.png";
 import customerImg from "../assets/customer.png";
 
-import logo1 from "../assets/logo1.png";
+import logo1 from "../assets/Logo1.png";
+
 import logo2 from "../assets/Logo2.png";
 import logo3 from "../assets/Logo3.png";
 import logo4 from "../assets/Logo4.png";
