@@ -1,85 +1,381 @@
-import React from "react";
-
-const services = [
-  {
-    title: "Custom Jewelry Design",
-    desc: "We design exclusive, handcrafted jewelry tailored to your personality, taste, and special moments.",
-    icon: "💎",
-  },
-  {
-    title: "Ring Resizing",
-    desc: "Our experts carefully resize your rings ensuring perfect fitting without affecting the original design.",
-    icon: "💍",
-  },
-  {
-    title: "Jewelry Cleaning",
-    desc: "Professional deep cleaning service that restores shine, brilliance, and elegance to your jewelry.",
-    icon: "✨",
-  },
-  {
-    title: "Luxury Packaging",
-    desc: "Premium packaging designed to enhance the luxury feel and make every gift unforgettable.",
-    icon: "🎁",
-  },
-  {
-    title: "Stone Replacement",
-    desc: "High-quality stone replacement using expert craftsmanship and precision detailing.",
-    icon: "🔮",
-  },
-];
+import serviceImg from "../assets/services.jfif";
+import teamImg from "../assets/team.jfif";
+import marketingImg from "../assets/marketing.jfif";
 
 export default function Services() {
   return (
-    <section
-      id="services"
-      className="bg-black text-white px-6 md:px-24 py-28 scroll-mt-28"
-    >
-      {/* HEADER */}
-      <div className="max-w-4xl mb-20">
-        <p className="text-[#d4af37] uppercase tracking-widest mb-3">
-          What We Offer
-        </p>
-        <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-          Luxury Jewelry <br />
-          Services Crafted With Precision
-        </h2>
-        <p className="text-gray-400 mt-6 leading-relaxed">
-          At RoséGems, every service is handled with attention to detail,
-          elegance, and craftsmanship — ensuring timeless beauty in every piece.
-        </p>
-      </div>
+    <div className="bg-gray-50">
 
-      {/* SERVICES LIST (ALTERNATING LAYOUT) */}
-      <div className="space-y-20">
-        {services.map((service, index) => (
+      {/* Hero Section */}
+      <section className="px-6 md:px-20 py-20 text-center bg-white">
+        <h1 className="text-5xl font-bold text-gray-800">
+          Our <span className="text-green-600">Professional Services</span>
+        </h1>
+        <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
+          At Nexcent, we provide innovative digital solutions designed
+          to help businesses scale efficiently and achieve long-term growth.
+        </p>
+      </section>
+
+      {/* Services Cards */}
+      <section className="px-6 md:px-20 py-20 grid md:grid-cols-3 gap-10">
+
+        {[
+          "Business Strategy",
+          "Digital Marketing",
+          "SaaS Development",
+          "Performance Analytics",
+          "Cloud Integration",
+          "24/7 Support"
+        ].map((service, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row ${
-              index % 2 !== 0 ? "md:flex-row-reverse" : ""
-            } gap-10 items-start`}
+            className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition"
           >
-            {/* ICON */}
-            <div className="text-5xl text-[#d4af37] shrink-0">
-              {service.icon}
-            </div>
-
-            {/* CONTENT */}
-            <div className="max-w-2xl">
-              <h3 className="text-2xl font-semibold mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-400 leading-relaxed">
-                {service.desc}
-              </p>
-
-              <div className="mt-6 h-[1px] w-24 bg-[#d4af37]"></div>
-            </div>
+            <h2 className="text-2xl font-semibold mb-4 text-green-600">
+              {service}
+            </h2>
+            <p className="text-gray-600">
+              Professional solutions tailored to boost your business performance
+              and digital transformation journey.
+            </p>
           </div>
         ))}
-      </div>
-    </section>
+
+      </section>
+
+      {/* Image + Text Section 1 */}
+      <section className="px-6 md:px-20 py-20 flex flex-col md:flex-row items-center gap-12 bg-white">
+
+        <div className="md:w-1/2">
+          <img
+            src={serviceImg}
+            alt="Business Meeting"
+            className="rounded-xl shadow-lg"
+          />
+        </div>
+
+        <div className="md:w-1/2">
+          <h2 className="text-4xl font-bold text-gray-800">
+            Strategy That Drives Results
+          </h2>
+
+          <p className="mt-6 text-gray-600">
+            We analyze your business goals and create customized strategies
+            that maximize efficiency and revenue growth.
+          </p>
+
+          <ul className="mt-6 space-y-3 text-gray-700">
+            <li>✔ Data-Driven Planning</li>
+            <li>✔ Market Research</li>
+            <li>✔ Competitive Analysis</li>
+            <li>✔ Growth Roadmaps</li>
+          </ul>
+        </div>
+
+      </section>
+
+      {/* Image + Text Section 2 */}
+      <section className="px-6 md:px-20 py-20 flex flex-col md:flex-row-reverse items-center gap-12 bg-gray-100">
+
+        <div className="md:w-1/2">
+          <img
+            src={marketingImg}
+            alt="Marketing Analytics"
+            className="rounded-xl shadow-lg"
+          />
+        </div>
+
+        <div className="md:w-1/2">
+          <h2 className="text-4xl font-bold text-gray-800">
+            Digital Marketing Excellence
+          </h2>
+
+          <p className="mt-6 text-gray-600">
+            Our marketing solutions help you reach the right audience,
+            increase conversions, and strengthen your brand presence.
+          </p>
+
+          <ul className="mt-6 space-y-3 text-gray-700">
+            <li>✔ SEO Optimization</li>
+            <li>✔ Social Media Campaigns</li>
+            <li>✔ Paid Advertising</li>
+            <li>✔ Performance Tracking</li>
+          </ul>
+        </div>
+
+      </section>
+
+      {/* Team Section */}
+      <section className="px-6 md:px-20 py-20 bg-white">
+
+        <div className="flex flex-col md:flex-row items-center gap-12">
+
+          {/* Left Image */}
+          <div className="md:w-1/2">
+            <img
+              src={teamImg}
+              alt="Our Team"
+              className="rounded-xl shadow-lg w-full max-w-md"
+            />
+          </div>
+
+          {/* Right Content */}
+          <div className="md:w-1/2">
+            <h2 className="text-4xl font-bold text-gray-800">
+              Meet Our Expert Team
+            </h2>
+
+            <p className="mt-6 text-gray-600">
+              Our experienced professionals are dedicated to delivering
+              innovative and scalable solutions tailored to your business needs.
+            </p>
+
+            <p className="mt-4 text-gray-600">
+              With years of industry expertise, our team focuses on strategy,
+              innovation, and execution to ensure measurable business growth.
+            </p>
+
+            <ul className="mt-6 space-y-3 text-gray-700">
+              <li>✔ Certified Industry Experts</li>
+              <li>✔ Innovative Thinkers</li>
+              <li>✔ Client-Focused Approach</li>
+              <li>✔ Proven Track Record</li>
+            </ul>
+
+            <button className="mt-8 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+              Learn More About Us
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* CTA Section */}
+      <section className="px-6 md:px-20 py-20 bg-green-600 text-white text-center">
+
+        <h2 className="text-4xl font-bold">
+          Ready to Accelerate Your Business Growth?
+        </h2>
+
+        <p className="mt-6">
+          Partner with Nexcent and transform your business digitally.
+        </p>
+
+        <button className="mt-8 bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+          Get Started Today
+        </button>
+
+      </section>
+
+    </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const About = () => {
+//   return (
+//     <div className="min-h-screen bg-black text-white px-6 py-16 md:px-20">
+
+//       {/* PROFILE IMAGE
+//       <div className="flex justify-center mb-10">
+//         <motion.img
+//           src={profile}
+//           alt="Profile"
+//           className="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover border-4 border-purple-600 shadow-lg"
+//           initial={{ opacity: 0, scale: 0.7 }}
+//           animate={{ opacity: 1, scale: 1 }}
+//           transition={{ duration: 0.6 }}
+//         />
+//       </div> */}
+
+//       {/* CONTENT */}
+//       <motion.div
+//         initial={{ opacity: 0, y: 30 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 0.6 }}
+//         className="max-w-3xl mx-auto text-center"
+//       >
+//         <h1 className="text-4xl font-bold text-purple-500 mb-4">About Me</h1>
+
+//         <p className="text-gray-300 leading-relaxed text-lg">
+//           I am a Frontend Developer skilled in designing modern, clean, and
+//           user-friendly interfaces. I love building websites that are fast,
+//           attractive, and responsive. I always focus on writing clean code
+//           and creating beautiful UI with perfect animations.
+//         </p>
+//       </motion.div>
+
+//       {/* SKILLS SECTION */}
+//       <div className="max-w-3xl mx-auto mt-14">
+//         <h2 className="text-3xl font-semibold text-purple-400 text-center mb-6">
+//           What Skills I Have
+//         </h2>
+
+//         <div className="flex justify-center gap-10 text-5xl text-purple-500">
+//           <FaHtml5 className="hover:text-purple-300 transition" />
+//           <FaCss3Alt className="hover:text-purple-300 transition" />
+//           <FaJs className="hover:text-purple-300 transition" />
+//           <FaReact className="hover:text-purple-300 transition" />
+//         </div>
+//       </div>
+
+//       {/* GOALS */}
+//       <div className="max-w-3xl mx-auto mt-16 text-center">
+//         <h2 className="text-3xl font-semibold text-purple-400 mb-4">
+//           My Goal
+//         </h2>
+
+//         <p className="text-gray-300 text-lg leading-relaxed">
+//           My goal is to become a professional frontend developer, mastering
+//           React.js, UI/UX, and advanced animations. I want to build real-world
+//           projects, improve daily, and grow into a full-stack developer in future.
+//         </p>
+//       </div>
+
+//       {/* BUTTONS */}
+//       <div className="flex justify-center gap-6 mt-12">
+//         <a
+//           href="/contact"
+//           className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg text-white font-semibold shadow-md"
+//         >
+//           Contact Me
+//         </a>
+
+//         <a
+//           href="/cv.pdf"
+//           download
+//           className="px-6 py-3 border border-purple-500 text-purple-300 rounded-lg hover:bg-purple-600/20 transition"
+//         >
+//           Download CV
+//         </a>
+
+
+
+//       </div>
+//     </div >
+//   );
+// };
+
+// export default About;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// export default function About() {
+//   return (
+
+
+
+
+
+//     <div className="min-h-screen bg-black text-white flex items-center justify-center p-10">
+//       <div className="max-w-4xl bg-purple-700/20 p-10 rounded-2xl flex gap-10 items-center">
+//         <img
+//           src={profileImg}
+//           alt="Profile"
+//           className="w-52 h-52 object-cover rounded-xl shadow-lg"
+//         />
+
+
+
+//         {/* TEXT SECTION */}
+//         <div className="space-y-6">
+//           <h1 className="text-4xl md:text-5xl font-extrabold text-purple-300 drop-shadow-lg">
+//             About Me
+//           </h1>
+
+//           <p className="text-lg leading-relaxed text-gray-300">
+//             Hi! I'm <span className="text-purple-300 font-semibold">Nimra Kashif</span>,
+//             a passionate Frontend Developer who loves building beautiful,
+//             responsive, and user‑friendly web interfaces. I work with
+//             <span className="text-purple-300 font-semibold"> HTML, CSS, JavaScript, React.js, and TailwindCSS</span>.
+//           </p>
+
+//           <p className="text-lg leading-relaxed text-gray-300">
+//             I'm currently seeking an <span className="font-semibold text-purple-300">internship</span>
+//             where I can apply my skills, learn from professionals, and grow as a
+//             developer.
+//           </p>
+
+//           <div className="flex gap-4 pt-4">
+//             <Link to="/contact">
+//               <button className="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-700 transition shadow-lg font-semibold">
+//                 Contact Me
+//               </button>
+//             </Link>
+
+
+
+
+
+//             <button className="px-6 py-3 rounded-xl border border-purple-400 hover:bg-purple-500/20 transition font-semibold">
+//               Download CV
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
 
 
 

@@ -1,37 +1,146 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Collection from "./pages/Collection";
-import Gallery from "./pages/Gallery";
-import Occasions from "./pages/Occasions";
 import Services from "./pages/Services";
-import Contact from "./pages/Contact";
+import Feature from "./pages/Feature";
+import Product from "./pages/Product";
+import Testimonial from "./pages/Testimonial";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
-   
-      <>
+    <Router>
+      <ScrollToTop />
+
+      <div className="flex flex-col min-h-screen">
+        
+        {/* Header */}
         <Header />
 
-        <main className="pt-1 bg-black">
-          <section id="home"><Home /></section>
-          <section id="about"><About /></section>
-          <section id="collection"><Collection /></section>
-          <section id="gallery"><Gallery /></section>
-          <section id="occasions"><Occasions /></section>
-          <section id="services"><Services /></section>
-          <section id="contact"><Contact /></section>
-          <Footer />
+        {/* Page Content */}
+        <main className="pt-[84px] flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/service" element={<Services />} />
+            <Route path="/feature" element={<Feature />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/testimonial" element={<Testimonial />} />
+            <Route path="/faq" element={<FAQ />} />
+          </Routes>
         </main>
-      </>
 
-    
+        {/* Footer */}
+        <Footer />
+
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import Header from "./components/Header";
+// import Footer from "./components/Footer";
+
+// import Home from "./pages/Home";
+// import Feature from "./pages/Feature";
+// import Product from "./pages/product";
+// import Services from "./pages/Services";
+// import Testimonial from "./pages/Testimonial";
+// import FAQ from "./pages/FAQ";
+
+// function App() {
+//   return (
+//     <>
+//       <Header />
+
+//       <main className="pt-20 bg-black">
+
+//         <section id="home">
+//           <Home />
+//         </section>
+
+//         <section id="feature">
+//           <Feature />
+//         </section>
+
+//         <section id="product">
+//           <Product />
+//         </section>
+
+//         <section id="services">
+//           <Services />
+//         </section>
+
+//         <section id="testimonial">
+//           <Testimonial />
+//         </section>
+
+//         <section id="faq">
+//           <FAQ />
+//         </section>
+
+//       </main>
+
+//       <Footer />
+//     </>
+//   );
+// }
+
+// export default App;
+
+
+
+
+// import Header from "./components/Header";
+// import Footer from "./components/Footer";
+// import Home from "./pages/Home";
+// import Collection from "./pages/Collection";
+// import Gallery from "./pages/Gallery";
+// import Occasions from "./pages/Occasions";
+// import Services from "./pages/Services";
+// import Contact from "./pages/Contact";
+
+// function App() {
+//   return (
+   
+//       <>
+//         <Header />
+
+//         <main className="pt-1 bg-black">
+//           <section id="home"><Home /></section>
+//           {/* <section id="about"><About /></section> */}
+//           <section id="collection"><Collection /></section>
+//           <section id="gallery"><Gallery /></section>
+//           <section id="occasions"><Occasions /></section>
+//           <section id="services"><Services /></section>
+//           <section id="contact"><Contact /></section>
+//           <Footer />
+//         </main>
+//       </>
+
+    
+//   );
+// }
+
+// export default App;
 
 
 
