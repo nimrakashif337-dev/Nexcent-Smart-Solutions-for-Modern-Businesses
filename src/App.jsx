@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Feature from "./pages/Feature";
-import Product from "./pages/Product";
+import Product from "./pages/ProductTemp";
 import Testimonial from "./pages/Testimonial";
 import FAQ from "./pages/FAQ";
 
