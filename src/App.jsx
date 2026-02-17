@@ -24,7 +24,7 @@ function App() {
         <main className="pt-[84px] flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/service" element={<Services />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/feature" element={<Feature />} />
             <Route path="/product" element={<Product />} />
             <Route path="/testimonial" element={<Testimonial />} />
