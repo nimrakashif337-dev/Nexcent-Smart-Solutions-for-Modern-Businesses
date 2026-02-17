@@ -34,7 +34,7 @@ export default function Services() {
 
   return (
     <div className="bg-gray-50 transition duration-300">
-    
+
 
       {/* Hero Section */}
       <section className="px-6 md:px-20 py-20 text-center">
@@ -42,7 +42,7 @@ export default function Services() {
           Our <span className="text-green-600">Professional Services</span>
         </h1>
 
-        <p className="mt-6 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        <p className="mt-6 text-black max-w-2xl mx-auto">
           We deliver innovative digital solutions designed to drive growth,
           enhance performance, and transform businesses for the future.
         </p>
@@ -85,6 +85,63 @@ export default function Services() {
           Get Started Today
         </button>
       </section>
+
+      {/* Why Choose Us Section */}
+      <section className="px-6 md:px-20 py-24 bg-white dark:bg-gray-800 transition duration-300">
+
+        <div className="text-center max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-800 dark:text-white">
+            Why Choose <span className="text-green-600">Nexcent?</span>
+          </h2>
+
+          <p className="mt-6 text-gray-600 dark:text-gray-300">
+            We combine strategy, innovation, and technology to deliver
+            scalable digital solutions that create measurable business impact.
+          </p>
+        </div>
+
+        <div className="mt-16 grid md:grid-cols-3 gap-10">
+
+          {/* Card 1 */}
+          <div className="p-8 rounded-2xl bg-gray-50 dark:bg-gray-900 shadow-md hover:shadow-xl transition duration-300 text-center">
+            <div className="text-5xl mb-6">🚀</div>
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+              Innovation-Driven Approach
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              We leverage modern technologies and forward-thinking strategies
+              to ensure your business stays ahead of the competition.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="p-8 rounded-2xl bg-gray-50 dark:bg-gray-900 shadow-md hover:shadow-xl transition duration-300 text-center">
+            <div className="text-5xl mb-6">🎯</div>
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+              Results-Focused Execution
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Our solutions are built with performance and measurable outcomes
+              in mind — ensuring real ROI for your investment.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="p-8 rounded-2xl bg-gray-50 dark:bg-gray-900 shadow-md hover:shadow-xl transition duration-300 text-center">
+            <div className="text-5xl mb-6">🤝</div>
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+              Long-Term Partnership
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              We believe in building strong client relationships through
+              transparency, collaboration, and continuous support.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
 
     </div>
   );
