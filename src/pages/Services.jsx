@@ -1,179 +1,272 @@
-import serviceImg from "../assets/services.jfif";
-import teamImg from "../assets/team.jfif";
-import marketingImg from "../assets/marketing.jfif";
-
 export default function Services() {
+  const services = [
+    {
+      title: "Business Strategy",
+      icon: "📊",
+      desc: "Strategic planning and execution frameworks to help businesses scale sustainably and stay competitive."
+    },
+    {
+      title: "Digital Marketing",
+      icon: "📣",
+      desc: "Performance-driven campaigns that increase visibility, engagement, and measurable growth."
+    },
+    {
+      title: "SaaS Development",
+      icon: "💻",
+      desc: "Modern, scalable, and secure SaaS applications built with cutting-edge technologies."
+    },
+    {
+      title: "Performance Analytics",
+      icon: "📈",
+      desc: "Data insights and analytics tools to optimize performance and maximize ROI."
+    },
+    {
+      title: "Cloud Integration",
+      icon: "☁",
+      desc: "Seamless cloud solutions to improve efficiency, flexibility, and scalability."
+    },
+    {
+      title: "24/7 Support",
+      icon: "🎧",
+      desc: "Reliable customer support ensuring uninterrupted business operations."
+    }
+  ];
+
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 dark:bg-gray-900 transition duration-300">
 
       {/* Hero Section */}
-      <section className="px-6 md:px-20 py-20 text-center bg-white">
-        <h1 className="text-5xl font-bold text-gray-800">
+      <section className="px-6 md:px-20 py-20 text-center">
+        <h1 className="text-5xl font-bold text-gray-800 dark:text-white">
           Our <span className="text-green-600">Professional Services</span>
         </h1>
-        <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
-          At Nexcent, we provide innovative digital solutions designed
-          to help businesses scale efficiently and achieve long-term growth.
+
+        <p className="mt-6 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          We deliver innovative digital solutions designed to drive growth,
+          enhance performance, and transform businesses for the future.
         </p>
       </section>
 
-      {/* Services Cards */}
-      <section className="px-6 md:px-20 py-20 grid md:grid-cols-3 gap-10">
+      {/* Services Grid */}
+      <section className="px-6 md:px-20 pb-20 grid md:grid-cols-3 gap-10">
 
-        {[
-          "Business Strategy",
-          "Digital Marketing",
-          "SaaS Development",
-          "Performance Analytics",
-          "Cloud Integration",
-          "24/7 Support"
-        ].map((service, index) => (
+        {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition"
+            className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 text-center"
           >
+            <div className="text-5xl mb-6">{service.icon}</div>
+
             <h2 className="text-2xl font-semibold mb-4 text-green-600">
-              {service}
+              {service.title}
             </h2>
-            <p className="text-gray-600">
-              Professional solutions tailored to boost your business performance
-              and digital transformation journey.
+
+            <p className="text-gray-600 dark:text-gray-300">
+              {service.desc}
             </p>
           </div>
         ))}
 
       </section>
 
-      {/* Image + Text Section 1 */}
-      <section className="px-6 md:px-20 py-20 flex flex-col md:flex-row items-center gap-12 bg-white">
-
-        <div className="md:w-1/2">
-          <img
-            src={serviceImg}
-            alt="Business Meeting"
-            className="rounded-xl shadow-lg"
-          />
-        </div>
-
-        <div className="md:w-1/2">
-          <h2 className="text-4xl font-bold text-gray-800">
-            Strategy That Drives Results
-          </h2>
-
-          <p className="mt-6 text-gray-600">
-            We analyze your business goals and create customized strategies
-            that maximize efficiency and revenue growth.
-          </p>
-
-          <ul className="mt-6 space-y-3 text-gray-700">
-            <li>✔ Data-Driven Planning</li>
-            <li>✔ Market Research</li>
-            <li>✔ Competitive Analysis</li>
-            <li>✔ Growth Roadmaps</li>
-          </ul>
-        </div>
-
-      </section>
-
-      {/* Image + Text Section 2 */}
-      <section className="px-6 md:px-20 py-20 flex flex-col md:flex-row-reverse items-center gap-12 bg-gray-100">
-
-        <div className="md:w-1/2">
-          <img
-            src={marketingImg}
-            alt="Marketing Analytics"
-            className="rounded-xl shadow-lg"
-          />
-        </div>
-
-        <div className="md:w-1/2">
-          <h2 className="text-4xl font-bold text-gray-800">
-            Digital Marketing Excellence
-          </h2>
-
-          <p className="mt-6 text-gray-600">
-            Our marketing solutions help you reach the right audience,
-            increase conversions, and strengthen your brand presence.
-          </p>
-
-          <ul className="mt-6 space-y-3 text-gray-700">
-            <li>✔ SEO Optimization</li>
-            <li>✔ Social Media Campaigns</li>
-            <li>✔ Paid Advertising</li>
-            <li>✔ Performance Tracking</li>
-          </ul>
-        </div>
-
-      </section>
-
-      {/* Team Section */}
-      <section className="px-6 md:px-20 py-20 bg-white">
-
-        <div className="flex flex-col md:flex-row items-center gap-12">
-
-          {/* Left Image */}
-          <div className="md:w-1/2">
-            <img
-              src={teamImg}
-              alt="Our Team"
-              className="rounded-xl shadow-lg w-full max-w-md"
-            />
-          </div>
-
-          {/* Right Content */}
-          <div className="md:w-1/2">
-            <h2 className="text-4xl font-bold text-gray-800">
-              Meet Our Expert Team
-            </h2>
-
-            <p className="mt-6 text-gray-600">
-              Our experienced professionals are dedicated to delivering
-              innovative and scalable solutions tailored to your business needs.
-            </p>
-
-            <p className="mt-4 text-gray-600">
-              With years of industry expertise, our team focuses on strategy,
-              innovation, and execution to ensure measurable business growth.
-            </p>
-
-            <ul className="mt-6 space-y-3 text-gray-700">
-              <li>✔ Certified Industry Experts</li>
-              <li>✔ Innovative Thinkers</li>
-              <li>✔ Client-Focused Approach</li>
-              <li>✔ Proven Track Record</li>
-            </ul>
-
-            <button className="mt-8 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
-              Learn More About Us
-            </button>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
       {/* CTA Section */}
       <section className="px-6 md:px-20 py-20 bg-green-600 text-white text-center">
-
         <h2 className="text-4xl font-bold">
           Ready to Accelerate Your Business Growth?
         </h2>
 
-        <p className="mt-6">
-          Partner with Nexcent and transform your business digitally.
+        <p className="mt-6 max-w-2xl mx-auto">
+          Partner with Nexcent and unlock innovative strategies that help
+          your business grow faster and smarter.
         </p>
 
         <button className="mt-8 bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
           Get Started Today
         </button>
-
       </section>
 
     </div>
   );
 }
+
+
+
+// import serviceImg from "../assets/services.jfif";
+// import teamImg from "../assets/team.jfif";
+// import marketingImg from "../assets/marketing.jfif";
+
+// export default function Services() {
+//   return (
+//     <div className="bg-gray-50">
+
+//       {/* Hero Section */}
+//       <section className="px-6 md:px-20 py-20 text-center bg-white">
+//         <h1 className="text-5xl font-bold text-gray-800">
+//           Our <span className="text-green-600">Professional Services</span>
+//         </h1>
+//         <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
+//           At Nexcent, we provide innovative digital solutions designed
+//           to help businesses scale efficiently and achieve long-term growth.
+//         </p>
+//       </section>
+
+//       {/* Services Cards */}
+//       <section className="px-6 md:px-20 py-20 grid md:grid-cols-3 gap-10">
+
+//         {[
+//           "Business Strategy",
+//           "Digital Marketing",
+//           "SaaS Development",
+//           "Performance Analytics",
+//           "Cloud Integration",
+//           "24/7 Support"
+//         ].map((service, index) => (
+//           <div
+//             key={index}
+//             className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition"
+//           >
+//             <h2 className="text-2xl font-semibold mb-4 text-green-600">
+//               {service}
+//             </h2>
+//             <p className="text-gray-600">
+//               Professional solutions tailored to boost your business performance
+//               and digital transformation journey.
+//             </p>
+//           </div>
+//         ))}
+
+//       </section>
+
+//       {/* Image + Text Section 1 */}
+//       <section className="px-6 md:px-20 py-20 flex flex-col md:flex-row items-center gap-12 bg-white">
+
+//         <div className="md:w-1/2">
+//           <img
+//             src={serviceImg}
+//             alt="Business Meeting"
+//             className="rounded-xl shadow-lg"
+//           />
+//         </div>
+
+//         <div className="md:w-1/2">
+//           <h2 className="text-4xl font-bold text-gray-800">
+//             Strategy That Drives Results
+//           </h2>
+
+//           <p className="mt-6 text-gray-600">
+//             We analyze your business goals and create customized strategies
+//             that maximize efficiency and revenue growth.
+//           </p>
+
+//           <ul className="mt-6 space-y-3 text-gray-700">
+//             <li>✔ Data-Driven Planning</li>
+//             <li>✔ Market Research</li>
+//             <li>✔ Competitive Analysis</li>
+//             <li>✔ Growth Roadmaps</li>
+//           </ul>
+//         </div>
+
+//       </section>
+
+//       {/* Image + Text Section 2 */}
+//       <section className="px-6 md:px-20 py-20 flex flex-col md:flex-row-reverse items-center gap-12 bg-gray-100">
+
+//         <div className="md:w-1/2">
+//           <img
+//             src={marketingImg}
+//             alt="Marketing Analytics"
+//             className="rounded-xl shadow-lg"
+//           />
+//         </div>
+
+//         <div className="md:w-1/2">
+//           <h2 className="text-4xl font-bold text-gray-800">
+//             Digital Marketing Excellence
+//           </h2>
+
+//           <p className="mt-6 text-gray-600">
+//             Our marketing solutions help you reach the right audience,
+//             increase conversions, and strengthen your brand presence.
+//           </p>
+
+//           <ul className="mt-6 space-y-3 text-gray-700">
+//             <li>✔ SEO Optimization</li>
+//             <li>✔ Social Media Campaigns</li>
+//             <li>✔ Paid Advertising</li>
+//             <li>✔ Performance Tracking</li>
+//           </ul>
+//         </div>
+
+//       </section>
+
+//       {/* Team Section */}
+//       <section className="px-6 md:px-20 py-20 bg-white">
+
+//         <div className="flex flex-col md:flex-row items-center gap-12">
+
+//           {/* Left Image */}
+//           <div className="md:w-1/2">
+//             <img
+//               src={teamImg}
+//               alt="Our Team"
+//               className="rounded-xl shadow-lg w-full max-w-md"
+//             />
+//           </div>
+
+//           {/* Right Content */}
+//           <div className="md:w-1/2">
+//             <h2 className="text-4xl font-bold text-gray-800">
+//               Meet Our Expert Team
+//             </h2>
+
+//             <p className="mt-6 text-gray-600">
+//               Our experienced professionals are dedicated to delivering
+//               innovative and scalable solutions tailored to your business needs.
+//             </p>
+
+//             <p className="mt-4 text-gray-600">
+//               With years of industry expertise, our team focuses on strategy,
+//               innovation, and execution to ensure measurable business growth.
+//             </p>
+
+//             <ul className="mt-6 space-y-3 text-gray-700">
+//               <li>✔ Certified Industry Experts</li>
+//               <li>✔ Innovative Thinkers</li>
+//               <li>✔ Client-Focused Approach</li>
+//               <li>✔ Proven Track Record</li>
+//             </ul>
+
+//             <button className="mt-8 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+//               Learn More About Us
+//             </button>
+
+//           </div>
+
+//         </div>
+
+//       </section>
+
+
+//       {/* CTA Section */}
+//       <section className="px-6 md:px-20 py-20 bg-green-600 text-white text-center">
+
+//         <h2 className="text-4xl font-bold">
+//           Ready to Accelerate Your Business Growth?
+//         </h2>
+
+//         <p className="mt-6">
+//           Partner with Nexcent and transform your business digitally.
+//         </p>
+
+//         <button className="mt-8 bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+//           Get Started Today
+//         </button>
+
+//       </section>
+
+//     </div>
+//   );
+// }
 
 
 
