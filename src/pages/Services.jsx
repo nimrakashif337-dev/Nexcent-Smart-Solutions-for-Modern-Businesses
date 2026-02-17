@@ -33,7 +33,8 @@ export default function Services() {
   ];
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 transition duration-300">
+    <div className="bg-gray-50 transition duration-300">
+    
 
       {/* Hero Section */}
       <section className="px-6 md:px-20 py-20 text-center">
