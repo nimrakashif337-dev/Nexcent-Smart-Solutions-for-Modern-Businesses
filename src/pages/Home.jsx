@@ -27,7 +27,7 @@ import logo1 from "../assets/Logo1.png";
 import logo2 from "../assets/Logo2.png";
 import logo3 from "../assets/Logo3.png";
 import logo4 from "../assets/Logo4.png";
-import logo5 from "../assets/LOgo5.png";
+import logo5 from "../assets/Logo5.png";
 import logo6 from "../assets/Logo6.png";
 
 import blog1 from "../assets/blog1.png";
